@@ -1,0 +1,37 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.0.0-beta.6/schema.json",
+  "extends": ["./node_modules/@weaverse/biome/biome.json"],
+  "files": {
+    "includes": [
+      "**",
+      "!**/public/**",
+      "!**/node_modules/**",
+      "!**/build/**",
+      "!**/dist/**",
+      "!**/storefront-api.generated.d.ts",
+      "!**/customer-account-api.generated.d.ts",
+      "!**/.shopify/**",
+      "!**/.react-router/**",
+      "!**/app/styles/app.css"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noExplicitAny": "off"
+      },
+      "nursery": {
+        "useUniqueElementIds": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "always"
+    }
+  }
+}
